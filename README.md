@@ -2,7 +2,7 @@
 
 The purpose of this project was to create a small and cheap device that helps market and promote SecKC at industry events. The original concept was a device running a form of Wifi Karma, that would respond to all wifi requests and then once connected would serve a page "Guerrilla Marketing" page about SecKC. In its first iteration I used a RaspberryPi Zero, running a series of scripts. However the price of the components needed made this a difficult project to "give to the people".  That is where the ESP8266 Came in. For about $5, anyone can make and deploy this device.
 
-[![ESP8266 Mobile-RR](http://i.imgur.com/MSpAXfE.jpg)](https://www.youtube.com/watch?v=ZpcRZoXQAzM)
+[![ESP8266 D1 Mini](http://i.imgur.com/MSpAXfE.jpg)](https://www.youtube.com/watch?v=ZpcRZoXQAzM)
 
 * User connects to the device broadcasting an SSID of "Conference WiFi" (this is configurable of course)
 * The captive portal helper on their phone/table/computer kicks in and presents them with a page showing a fancy SecKC logo, and beeps the ESP8266 letting the owner know that someone connected.
@@ -13,16 +13,17 @@ The purpose of this project was to create a small and cheap device that helps ma
 * Piezo buzzer (http://www.aliexpress.com/snapshot/7762649061.html?orderId=75910217556320)
 * USB battery pack with micro-usb cable to power everything
 
-## Wiring
+## Wiring the Piezo
 Connect the '+' lead of the piezo to GPIO 4 (D2 on WeMos D1 Mini) and '-' lead to Ground.
 I chose GPIO 4 because I installed the long leads with the headers on the WeMos D1 Mini. The spacing from ground was perfect to just plug the buzzer in direct between G & D2.
 
-![Piezo Solder](http://i.imgur.com/f8IIkPY.jpg=250x)
+![Piezo Solder bottom](http://i.imgur.com/f8IIkPY.jpg=150x)
+![Piezo Solder top]http://i.imgur.com/heRqjkN.jpg=150x)
 
 ## Build Firmware
 I use PlatformIO to build this.  http://platformio.org/
 
-* Install PlatformIO and let it update itself on first startup
+* Install Atom editor and PlatformIO and let it update itself on first startup
 * Once updated and restarted, clone the project to a folder and open the project in PlatformIO
 * Next build the firmware by clicking the checkmark icon on the toolbar
 
