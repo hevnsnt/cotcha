@@ -6,7 +6,10 @@ The purpose of this project was to create a small and cheap device that helps ma
 
 * User connects to the device broadcasting an SSID of "Conference WiFi" (this is configurable of course)
 * The captive portal helper on their phone/table/computer kicks in and presents them with a page showing a fancy SecKC logo, and beeps the ESP8266 letting the owner know that someone connected.
-[![SecKC Logo Animation](https://media.giphy.com/media/l0IyizNq2M7fwBZGE/giphy.gif)
+![SecKC Logo Animation](https://media.giphy.com/media/l0IyizNq2M7fwBZGE/giphy.gif)
+<img src="https://media.giphy.com/media/l0IyizNq2M7fwBZGE/giphy.gif">
+
+
 * There is a hidden hacking game embedded. If you view source of the http://1.3.3.7/index.htm page, it will give a few clues on how to begin.
 
 ## Parts List
