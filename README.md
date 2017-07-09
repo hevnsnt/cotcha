@@ -6,7 +6,7 @@ The purpose of this project was to create a small and cheap device that helps ma
 
 * User connects to the device broadcasting an SSID of "Conference WiFi" (this is configurable of course)
 * The captive portal helper on their phone/table/computer kicks in and presents them with a page showing a fancy SecKC logo, and beeps the ESP8266 letting the owner know that someone connected.
-* There is a hidden hacking game embedded. If you view source of the http://1.3.3.7/index.htm page, it will give a few clues on how to begin. 
+* There is a hidden hacking game embedded. If you view source of the http://1.3.3.7/index.htm page, it will give a few clues on how to begin.
 
 ## Parts List
 * ESP8266 Module with 4MB of flash  (I used the WeMos D1 Mini) (http://www.aliexpress.com/snapshot/7833150367.html?orderId=76398745536320)
@@ -38,6 +38,13 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 ![Upload SPIFFS 2](https://s20.postimg.org/vrw3l0hy5/image.png)
 
 **Note: Anytime you make changes to the firmware or the data you can rebuild and upload either without the need to install the other again. They reside in different areas of the flash memory.**
+
+## Game Completion:
+If you complete the game, you will get access to the SecKC-ESP8266 Console. ".
+From here you can monitor all connections and see when someone connects to the device.
+The console also allows you to enter commands to get more info about the status of the device, and various other 'things'.
+
+The "debug" setting is on by default and shows you all DNS and HTTP requests made to the device. It's kind of cool to see all the sites that the apps on your phone are trying to access. Check out the screenshots of the console for a glimpse of what it looks like. Some apps are very noisy. You can toggle the "debug" off to not see that stuff.
 
 ## References
 The SecKC-ESP8266 Project started from the RickRoll Project (https://github.com/idolpx/mobile-rr) and modified code to fit our needs.  That project referenced the projects below:
