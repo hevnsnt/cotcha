@@ -5,15 +5,8 @@ The purpose of this project was to create a small and cheap device that helps ma
 [![ESP8266 Mobile-RR](http://i.imgur.com/MSpAXfE.jpg)](https://www.youtube.com/watch?v=ZpcRZoXQAzM)
 
 * User connects to the device broadcasting an SSID of "Conference WiFi" (this is configurable of course)
-* The captive portal helper on their phone/table/computer kicks in and presents them with a page showing "Terms of Service" and a button labeled "I Accept"
-* When they click the button a full screen animated GIF of Rick Astley dancing appears and an audio clip of "Never Gonna Give You Up" starts playing on loop along with a message in the bottom right letting them know they got rock rolled (Incase they don't understand what's going on)
-
-On bootup, the buzzer plays a little bit of "Never Gonna Give You Up".
-To access the console, connect to the ESP8266 Access Point and browse to "http://10.10.10.1/console".
-From here you can monitor all connections and see when someone gets Rick Roll'd by the device.
-The console also allows you to enter commands to get more info about the status of the device, change the SSID, get the Rick Roll count and even beep the buzzer.
-
-The "debug" setting is on by default and shows you all DNS and HTTP requests made to the device. It's kind of cool to see all the sites that the apps on your phone are trying to access. Check out the screenshots of the console for a glimpse of what it looks like. Some apps are very noisy. You can toggle the "debug" off to not see that stuff.
+* The captive portal helper on their phone/table/computer kicks in and presents them with a page showing a fancy SecKC logo, and beeps the ESP8266 letting the owner know that someone connected.
+* There is a hidden hacking game embedded. If you view source of the http://1.3.3.7/index.htm page, it will give a few clues on how to begin. 
 
 ## Parts List
 * ESP8266 Module with 4MB of flash  (I used the WeMos D1 Mini) (http://www.aliexpress.com/snapshot/7833150367.html?orderId=76398745536320)
