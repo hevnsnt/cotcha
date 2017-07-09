@@ -17,8 +17,9 @@ The purpose of this project was to create a small and cheap device that helps ma
 Connect the '+' lead of the piezo to GPIO 4 (D2 on WeMos D1 Mini) and '-' lead to Ground.
 I chose GPIO 4 because I installed the long leads with the headers on the WeMos D1 Mini. The spacing from ground was perfect to just plug the buzzer in direct between G & D2.
 
-![Piezo Solder bottom](http://i.imgur.com/f8IIkPY.jpg =150x)
-![Piezo Solder top](http://i.imgur.com/heRqjkN.jpg =150x)
+<img src="http://i.imgur.com/f8IIkPY.jpg" alt="Piezo Solder bottom" style="width: 200px;"/>
+<img src="http://i.imgur.com/heRqjkN.jpg" alt="Piezo Solder top" style="width: 200px;"/>
+
 
 ## Build Firmware
 I use PlatformIO to build this.  http://platformio.org/
