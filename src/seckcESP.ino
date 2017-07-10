@@ -1439,18 +1439,21 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "rm" ), 2 ) )
     {
-        if ( !strncasecmp_P ( msg, PSTR ( "rm " ), 3 ) )
+        if ( !strncasecmp_P ( msg, PSTR ( "rm " ), 3 ) and ADMIN)
         {
             if ( SPIFFS.exists ( &msg[3] ) )
             {
-                //SPIFFS.remove ( &msg[3] );
-                client->printf_P ( PSTR ( "[[b;red;]rm: %s: VIOLATION OF SECKC MOTTO -- Destroy no data]" ), &msg[3] );
+                SPIFFS.remove ( &msg[3] );
+                //client->printf_P ( PSTR ( "[[b;red;]rm: %s: VIOLATION OF SECKC MOTTO -- Destroy no data]" ), &msg[3] );
             }
             else
             {
                 client->printf_P ( PSTR ( "[[b;red;]rm: %s: No such file or directory]" ), &msg[3] );
             }
-
+        }
+        else
+        {
+          client->printf_P ( PSTR ( "[[b;red;]VOLATION -- NOT ADMIN]" ) );
         }
     }
     else if ( !strcasecmp_P ( msg, PSTR ( "info" ) ) )
@@ -1522,6 +1525,7 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "user" ), 4 ) )
     {
+      if (ADMIN) {
         if ( !strncasecmp_P ( msg, PSTR ( "user " ), 5 ) )
         {
             sprintf ( username, "%s", &msg[5] );
@@ -1531,7 +1535,11 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
         else
         {
             client->printf_P ( PSTR ( "[[b;yellow;]Username:] %s" ), username );
-        }
+        }}
+      else
+      {
+        client->printf_P ( PSTR ( "[[b;red;]VOLATION -- NOT ADMIN]" ) );
+      }
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "pass" ), 4 ) )
     {
