@@ -52,8 +52,9 @@ const char *appid           = "SecKC-ESP8266";
 char ssid[]                 = "SecKC WiFi";
 int channel                 = 0;
 char username[]             = "admin";
-char password[]             = "";
+char password[]             = "password";
 bool DEBUG                  = 1;
+bool ADMIN                  = 0;
 bool SILENT                 = 0;
 int interval                = 30;                                               // 30 Minutes
 
@@ -68,6 +69,7 @@ int interval                = 30;                                               
 #define HELP_TEXT "[[b;green;]SecKC Terminal]\n" \
         "------------------------\n" \
         "[[b;cyan;]?] or [[b;cyan;]help]    show this help\n\n" \
+        "[[b;cyan;]admin-help]   show admin settings\n" \
         "[[b;cyan;]debug {0/1}]  show/set debug output\n" \
         "[[b;cyan;]silent {0/1}] show/set silent mode\n" \
         "[[b;cyan;]beep {n/rr}]  sound piezo for 'n' ms\n" \
@@ -1294,6 +1296,40 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     {
         return;
     }
+    // Enable ADMIN mode
+    if ( !strncasecmp_P ( msg, PSTR ( "admin" ), 5 ) )
+    {
+        if ( l > 5 )
+        {
+            int v = atoi ( &msg[6] );
+
+            if ( v > 0 )
+            {
+                ADMIN = true;
+            }
+            else
+            {
+                ADMIN = false;
+            }
+
+            CHANGED = true;
+        }
+
+        if ( ADMIN )
+        {
+            client->printf_P ( PSTR ( "[[b;red;]===> HACKER DETECTED <========================================================]") );
+            client->printf_P ( PSTR ( "[[b;red;]===>] [[b;yellow;]Please remember the SecKC Motto:]                                     [[b;red;]<===]") );
+            client->printf_P ( PSTR ( "[[b;red;]===>] [[b;yellow;]Destroy no data, maintain no persistence; above all else, do no harm] [[b;red;]<===]") );
+            client->printf_P ( PSTR ( "[[b;red;]===>] [[b;green;]HIDDEN Admin mode enabled -- have fun :)]                             [[b;red;]<===]") );
+            client->printf_P ( PSTR ( "[[b;red;]========================================================> HACKER DETECTED <===]") );
+
+        }
+        else
+        {
+            client->printf_P ( PSTR ( "[[b;yellow;]Admin mode disabled]" ) );
+        }
+
+    }
 
     // Custom command to talk to device
     if ( !strncasecmp_P ( msg, PSTR ( "debug" ), 5 ) )
@@ -1726,6 +1762,10 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
         client->printf_P ( PSTR ( "Resetting EEPROM to defaults" ) );
         eepromInitialize();
         ESP.restart();
+    }
+    else if ( !strcasecmp_P ( msg, PSTR ( "admin-help" ) ) )
+    {
+        client->printf_P ( PSTR ( admin_TEXT ) );
     }
     else if ( ( *msg == '?' || !strcasecmp_P ( msg, PSTR ( "help" ) ) ) )
     {
