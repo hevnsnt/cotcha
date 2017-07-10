@@ -4,14 +4,11 @@
 // - And will get the SecKC Branded Captive Portal, which
 // - has a small hacking challenge embedded in it.
 
-
 #include <stdio.h>
 #include <string.h>
-
 #include <Arduino.h>
 #include <ArduinoOTA.h>
 #include <ArduinoJson.h>
-
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <ESPAsyncTCP.h>
@@ -20,7 +17,6 @@
 #include <FS.h>
 #include <Hash.h>
 #include <Ticker.h>
-
 #include "DNSServer.h"
 
 extern "C"
@@ -53,7 +49,7 @@ int setupAP ( int chan_selected );
 //***************************************************************************
 float version               = 1.43;
 const char *appid           = "SecKC-ESP8266";
-char ssid[]                 = "Conference WiFi";
+char ssid[]                 = "SecKC WiFi";
 int channel                 = 0;
 char username[]             = "admin";
 char password[]             = "";
