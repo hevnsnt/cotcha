@@ -124,39 +124,42 @@ jQuery(document).ready(function($) {
             prompt: '[[;red;]>] ',
             checkArity: false,
             greetings:
-"============================================\n" +
-"                  .+hNh+.                   \n" +
-"               `:odMMMMMMMdo:`              \n" +
-"            ./yNMMMMMMMMMMMMMNy/.           \n" +
-"         -odNMMMMMMMMMMMMMMMMMMMNdo-        \n" +
-"     `/smNMMMMMMmmdddmMMMMMMMMMMMMMNms/`    \n" +
-"  -+hNMMMMMMMMMh``````.:+++oohMMMMMMMMMNh+- \n" +
-"  mMMMMMMMMMMMN.             `yMMMMMMMMMMMm \n" +
-"  NMMMMMMMMMMM/               :MMMMMMMMMMMN \n" +
-"  NMMMMMMMMMMh                `NMMMMMMMMMMN \n" +
-"  NMMMMMMdhys.                 yMMMMMMMMMMN \n" +
-"  NMMMMMMyo+/`                 :MMMMMMMMMMN \n" +
-"  NMMMMMMMMMM.                 .:/oymMMMMMN \n" +
-"  NMMMMMMmNMM+                `dmmdhdMMMMMN \n" +
-"  NMMMMMM:-od:                `mMMMMMMMMMMN \n" +
-"  NMMMMMh   `                  oMMMMMMMMMMN \n" +
-"  NMMMh:`                    /dNMMMMMMMMMMN \n" +
-"  NMh:`                     .mMMMMMMMMMMMMN \n" +
-"  /:`                 +s:.`.yMMMMMMMMMMMMMm \n" +
-"                      `/yddmMMMMMMMMMMMmy/. \n" +
-"                    `oyyymMMMMMMMMMNds:.    \n" +
-"                    sMMMMMMMMMMMmh+-`       \n" +
-"                    -NMMMMMMNms/.           \n" +
-"                     oMMMNdo-`              \n" +
-"                      yy/.                  \n" +
+"[[b;green;]============================================]\n" +
+"[[b;green;]                  .+hNh+.                   ]\n" +
+"[[b;green;]               `:odMMMMMMMdo:`              ]\n" +
+"[[b;green;]            ./yNMMMMMMMMMMMMMNy/.           ]\n" +
+"[[b;green;]         -odNMMMMMMMMMMMMMMMMMMMNdo-        ]\n" +
+"[[b;green;]     `/smNMMMMMMmmdddmMMMMMMMMMMMMMNms/`    ]\n" +
+"[[b;green;]  -+hNMMMMMMMMMh``````.:+++oohMMMMMMMMMNh+- ]\n" +
+"[[b;green;]  mMMMMMMMMMMMN.             `yMMMMMMMMMMMm ]\n" +
+"[[b;green;]  NMMMMMMMMMMM/               :MMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMMMMMMMMh                `NMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMMMMdhys.                 yMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMMMMyo+/`                 :MMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMMMMMMMM.                 .:/oymMMMMMN ]\n" +
+"[[b;green;]  NMMMMMMmNMM+                `dmmdhdMMMMMN ]\n" +
+"[[b;green;]  NMMMMMM:-od:                `mMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMMMh   `                  oMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMMMh:`                    /dNMMMMMMMMMMN ]\n" +
+"[[b;green;]  NMh:`                     .mMMMMMMMMMMMMN ]\n" +
+"[[b;green;]  /:`                 +s:.`.yMMMMMMMMMMMMMm ]\n" +
+"[[b;green;]                      `/yddmMMMMMMMMMMMmy/. ]\n" +
+"[[b;green;]                    `oyyymMMMMMMMMMNds:.    ]\n" +
+"[[b;green;]                    sMMMMMMMMMMMmh+-`       ]\n" +
+"[[b;green;]                    -NMMMMMMNms/.           ]\n" +
+"[[b;green;]                     oMMMNdo-`              ]\n" +
+"[[b;green;]                      yy/.                  ]\n" +
 "                                            \n" +
-"=        SecKC Hacking Terminal            =\n" +
-"============================================\n" +
-" Greetings -- You have hacked your way into \n" +
-" the #SecKC ESP8266 Terminal. At this point \n" +
-" you have completed the challenge, however  \n" +
-" there are still many 'toys' available via  \n" +
-" the terminal.",
+"[[b;green;]=        SecKC Hacking Terminal            =]\n" +
+"[[b;green;]============================================]\n" +
+"[[b;green;] Greetings -- You have hacked your way into ]\n" +
+"[[b;green;] the #SecKC ESP8266 Terminal. At this point ]\n" +
+"[[b;green;] you have completed the challenge, however  ]\n" +
+"[[b;green;] there are still many 'toys' available via  ]\n" +
+"[[b;green;] the terminal.]\n" +
+"[[b;green;]============================================]\n" +
+"",
+
             onInit: function() {
                 $(".terminal").css("text-shadow", "0 0 0 !important");
             }
