@@ -1,6 +1,6 @@
 # SecKC ESP8266 Captive Portal and Hacking Challenge
 
-The purpose of this project was to create a small and cheap device that helps market and promote SecKC at industry events. The original concept was a device running a form of Wifi Karma, that would respond to all wifi requests and then once connected would serve a page "Guerrilla Marketing" page about SecKC. In its first iteration I used a RaspberryPi Zero, running a series of scripts. However the price of the components needed made this a difficult project to "give to the people".  That is where the ESP8266 Came in. For about $5, anyone can make and deploy this device.
+The purpose of this project was to create a small and cheap device that helps market and promote SecKC at industry events. The original concept was a device running a form of Wifi Karma, that would respond to all wifi requests and then once connected would serve a "Guerrilla Marketing" page about SecKC. In its first iteration I used a RaspberryPi Zero, running a series of scripts. However the price of the components needed made this a difficult project to "give to the people".  That is where the ESP8266 Came in. For about $5, anyone can make and deploy this device.
 
 [![ESP8266 D1 Mini](http://i.imgur.com/MSpAXfE.jpg)](https://www.youtube.com/watch?v=ZpcRZoXQAzM)
 
