@@ -13,9 +13,11 @@ The purpose of this project was to create a small and cheap device that helps ma
 * There is a hidden hacking game embedded. If you view source of the http://1.3.3.7/index.htm page, it will give a few clues on how to begin.
 
 ## Parts List
-* ESP8266 Module with 4MB of flash  (I used the WeMos D1 Mini) (http://www.aliexpress.com/snapshot/7833150367.html?orderId=76398745536320)
+* ESP8266 Module with 4MB of flash  (I used the WeMos D1 Mini) (https://www.aliexpress.com/item/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266-by/32642350275.html?spm=a2g0s.9042311.0.0.3Ae9zT)
+* TP4056 USB Charger Module (https://www.aliexpress.com/item/20Pcs-TP4056-5V-1A-Micro-USB-Charger-Module-18650-Lithium-Battery-Charging-Board/32776109454.html?spm=a2g0s.9042311.0.0.3Ae9zT)
+*  3.7V 500mAh 503035 Lithium Polymer LiPo Rechargeable Battery (https://www.aliexpress.com/item/Wholesale-100-pcs-3-7V-500mAh-503035-Lithium-Polymer-LiPo-Rechargeable-Battery-For-Mp3-Mp4-PAD/32734113304.html?spm=a2g0s.9042311.0.0.3Ae9zT)
 * Piezo buzzer (http://www.aliexpress.com/snapshot/7762649061.html?orderId=75910217556320)
-* USB battery pack with micro-usb cable to power everything
+
 
 ## Wiring the Piezo
 Connect the '+' lead of the piezo to GPIO 4 (D2 on WeMos D1 Mini) and '-' lead to Ground.
