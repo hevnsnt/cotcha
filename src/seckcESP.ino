@@ -1533,19 +1533,27 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "pass" ), 4 ) )
     {
-        if ( !strncasecmp_P ( msg, PSTR ( "pass " ), 5 ) )
+      if (ADMIN)
         {
-            sprintf ( password, "%s", &msg[5] );
-            client->printf_P ( PSTR ( "[[b;yellow;]Changing Password:] %s" ), password );
-            CHANGED = true;
+          if ( !strncasecmp_P ( msg, PSTR ( "pass " ), 5 ) )
+          {
+              sprintf ( password, "%s", &msg[5] );
+              client->printf_P ( PSTR ( "[[b;yellow;]Changing Password:] %s" ), password );
+              CHANGED = true;
+          }
+          else
+          {
+              client->printf_P ( PSTR ( "[[b;yellow;]Password:] %s" ), password );
+          }
         }
-        else
+      else
         {
-            client->printf_P ( PSTR ( "[[b;yellow;]Password:] %s" ), password );
+          client->printf_P ( PSTR ( "[[b;red;]VOLATION -- NOT ADMIN]" ) );
         }
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "ssid" ), 4 ) )
     {
+      if (ADMIN) {
         if ( l == 4 )
         {
             client->printf_P ( PSTR ( "[[b;yellow;]SSID:] %s" ), ssid );
@@ -1564,9 +1572,15 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
             eepromSave();
             state = statemachine::ap_change;
         }
+      }
+    else
+          {
+            client->printf_P ( PSTR ( "[[b;red;]VOLATION -- NOT ADMIN]" ) );
+          }
     }
     else if ( !strncasecmp_P ( msg, PSTR ( "chan" ), 4 ) )
     {
+      if (ADMIN) {
         if ( l == 4 )
         {
             if ( channel == 0 )
@@ -1577,6 +1591,11 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
             {
                 client->printf_P ( PSTR ( "[[b;yellow;]Channel:] %d" ), WiFi.channel() );
             }
+          }
+        else
+                  {
+                    client->printf_P ( PSTR ( "[[b;red;]VOLATION -- NOT ADMIN]" ) );
+                  }
         }
         else
         {
