@@ -52,7 +52,8 @@ After your firmware build is successful you can upload it by clicking the arrow 
 
 #### [Step 1] Upload Firmware
 ![Upload Firmware](https://s20.postimg.org/ue4gppiot/upload_firmware.png)
-**Note: Anytime you make changes to the firmware you can rebuild and upload either without needing to upload the SPIFFS data again. They reside in different areas of the flash memory.**
+
+*Note: Anytime you make changes to the firmware you can rebuild and upload either without needing to upload the SPIFFS data again. They reside in different areas of the flash memory.*
 
 
 #### [Step 2] Upload SPIFFS Data Director
@@ -62,7 +63,9 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 ![Upload SPIFFS 1](https://s20.postimg.org/p1ymo5v4t/build_spiffs.png)
 
 ![Upload SPIFFS 2](https://s20.postimg.org/vrw3l0hy5/image.png)
-**Note: Anytime you make changes to the to the www data you can upload without needing to reupload firmware. They reside in different areas of the flash memory.**
+
+
+*Note: Anytime you make changes to the to the www data you can upload without needing to reupload firmware. They reside in different areas of the flash memory.*
 
 #### [STEP 3] Deploy it a place where people love America.
 
@@ -75,9 +78,11 @@ This section is for the hackers.  Yep, I fucked mine up a couple times too.  Her
 $ ./esptool.py erase_flash`
 ```
 
-*Note 1: This assumes you are using OSX or *nix based operating system. If you are running Windows, esptool runs fine but you will need python installed. There are several windows tools available, and a lot of people reference [this page](http://www.pratikpanda.com/completely-format-erase-esp8266-flash-memory/) as a good walk through, but I have not tested it. 
 
-*Note 1: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)
+*Note 1: This assumes you are using OSX or *nix based operating system. If you are running Windows, esptool runs fine but you will need python installed. There are several windows tools available, and a lot of people reference [this page](http://www.pratikpanda.com/completely-format-erase-esp8266-flash-memory/) as a good walk through, but I have not tested it.* 
+
+
+*Note 1: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)*
 
 3. Re-Upload the Firmware and SPIFFS content  
 4. High-five yourself for being super awesome 
