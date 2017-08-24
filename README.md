@@ -79,10 +79,10 @@ $ ./esptool.py erase_flash
 ```
 
 
-*Note 1: This assumes you are using OSX or *nix based operating system. If you are running Windows, esptool runs fine but you will need python installed. There are several windows tools available, and a lot of people reference [this page](http://www.pratikpanda.com/completely-format-erase-esp8266-flash-memory/) as a good walk through, but I have not tested it.* 
+   *Note 1: This assumes you are using OSX or \*nix based operating system. If you are running Windows, esptool runs fine but you will need python installed. There are several windows tools available, and a lot of people reference [this page](http://www.pratikpanda.com/completely-format-erase-esp8266-flash-memory/) as a good walk through, but I have not tested it.* 
 
 
-*Note 1: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)*
+   *Note 2: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)*
 
 3. Re-Upload the Firmware and SPIFFS content  
 4. High-five yourself for being super awesome 
