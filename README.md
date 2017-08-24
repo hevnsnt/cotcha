@@ -12,11 +12,11 @@
 
 ## Table of Contents
 
-- [Parts List](#parts list)
-- [Building Hardware](#hardware construction)
+- [Parts List](#parts-list)
+- [Building Hardware](#hardware-construction)
 - [Firmware](#firmware)
-- [OH SHIT I FUCKED IT UP](#OH SHIT I FUCKED IT UP)
-- [References](#References)
+- [OH SHIT I FUCKED IT UP](#oh-shit-i-fucked-it-up)
+- [References](#references)
 
 
 
