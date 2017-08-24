@@ -61,7 +61,7 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 ![Upload SPIFFS 2](https://s20.postimg.org/vrw3l0hy5/image.png)
 **Note: Anytime you make changes to the to the www data you can upload without needing to reupload firmware. They reside in different areas of the flash memory.**
 
-#### [STEP 3] Deploy it some place they love America.
+#### [STEP 3] Deploy it a place where people love America.
 
 ## OH SHIT I FUCKED IT UP
 This section is for the hackers.  Yep, I fucked mine up a couple times too.  Here is how you fix all the fuck ups. Change to the included ./esptool/ directory.  Don't worry, you can the esptool.py tool to completely erase the ESP8266 and start all over.  The steps would be:
