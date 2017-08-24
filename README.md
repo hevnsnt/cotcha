@@ -15,7 +15,7 @@
 - [Parts List](#parts-list)
 - [Building Hardware](#hardware-construction)
 - [Firmware](#firmware)
-- [OH SHIT I FUCKED IT UP](#oh-shit-i-fucked-it-up)
+- [What to when you fucked it up](#oh-shit-i-fucked-it-up)
 - [References](#references)
 
 
