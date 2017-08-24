@@ -35,18 +35,26 @@ I use PlatformIO to build this.  http://platformio.org/
 
 ![Build Firmware](https://s20.postimg.org/e9mna84pp/build_firmware.png)
 
+
 ## Upload Firmware and SPIFFS data
 After your firmware build is successful you can upload it by clicking the arrow under the checkmark in the PlatformIO toolbar.
 
+### [Step 1] Upload Firmware
 ![Upload Firmware](https://s20.postimg.org/ue4gppiot/upload_firmware.png)
+**Note: Anytime you make changes to the firmware you can rebuild and upload either without needing to upload the SPIFFS data again. They reside in different areas of the flash memory.**
+
+
+### [Step 2] Upload SPIFFS Data Director
 
 You can add/edit the files in the "www" folder to your liking. (Files in the "www" folder will be cloned and gzipped to the "data" folder when building.) Then follow the instructions below to build and upload the SPIFFS file system image to your ESP8266.
 
 ![Upload SPIFFS 1](https://s20.postimg.org/p1ymo5v4t/build_spiffs.png)
 
 ![Upload SPIFFS 2](https://s20.postimg.org/vrw3l0hy5/image.png)
+**Note: Anytime you make changes to the to the www data you can upload without needing to reupload firmware. They reside in different areas of the flash memory.**
 
-**Note: Anytime you make changes to the firmware or the data you can rebuild and upload either without the need to install the other again. They reside in different areas of the flash memory.**
+### [STEP 3] Deploy it some place they love America.
+
 
 ## Game Completion:
 If you complete the game, you will get access to the SecKC-ESP8266 Console. ".
