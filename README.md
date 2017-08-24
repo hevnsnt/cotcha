@@ -63,6 +63,16 @@ The console also allows you to enter commands to get more info about the status 
 
 The "debug" setting is on by default and shows you all DNS and HTTP requests made to the device. It's kind of cool to see all the sites that the apps on your phone are trying to access. Check out the screenshots of the console for a glimpse of what it looks like. Some apps are very noisy. You can toggle the "debug" off to not see that stuff.
 
+## OH SHIT I FUCKED IT UP
+This section is for the hackers.  Yep, I fucked mine up a couple times too.  Here is how you fix all the fuck ups. Change to the included ./esptool/ directory.  Don't worry, you can the esptool.py tool to completely erase the ESP8266 and start all over.  The steps would be:
+
+1. `./esptool.py erase_flash`
+*Note: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `sudo ./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)
+
+2. Re-Upload the Firmware and SPIFFS content.  
+3. High-five yourself for being awesome. 
+
+
 ## References
 The SecKC-ESP8266 Project started from the RickRoll Project (https://github.com/idolpx/mobile-rr) and modified code to fit our needs.  That project referenced the projects below:
 
