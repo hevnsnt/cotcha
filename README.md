@@ -75,7 +75,7 @@ This section is for the hackers.  Yep, I fucked mine up a couple times too.  Her
 1. Connect the D1 Mini to your computer via the Micro-USB port and discover the serial port that is used. [Sparkfun](https://learn.sparkfun.com/tutorials/terminal-basics/connecting-to-your-device) has an excellent write-up on how to do this if you dont know already.
 2. Open your terminal and change to the included ./esptool/ directory and run: 
 ```sh
-$ ./esptool.py erase_flash`
+$ ./esptool.py erase_flash
 ```
 
 
