@@ -26,7 +26,7 @@ I chose GPIO 4 because I installed the long leads with the headers on the WeMos 
 <img src="http://i.imgur.com/f8IIkPY.jpg" width="200"><img src="http://i.imgur.com/heRqjkN.jpg" alt="Piezo Solder top" width="200"/>
 
 
-## Build Firmware
+## [STEP 1] Build Firmware
 I use PlatformIO to build this.  http://platformio.org/
 
 * Install Atom editor and PlatformIO and let it update itself on first startup
@@ -35,7 +35,7 @@ I use PlatformIO to build this.  http://platformio.org/
 
 ![Build Firmware](https://s20.postimg.org/e9mna84pp/build_firmware.png)
 
-## Upload Firmware and SPIFFS data
+## [STEP 2] Upload Firmware and SPIFFS data
 After your firmware build is successful you can upload it by clicking the arrow under the checkmark in the PlatformIO toolbar.
 
 ![Upload Firmware](https://s20.postimg.org/ue4gppiot/upload_firmware.png)
@@ -45,6 +45,8 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 ![Upload SPIFFS 1](https://s20.postimg.org/p1ymo5v4t/build_spiffs.png)
 
 ![Upload SPIFFS 2](https://s20.postimg.org/vrw3l0hy5/image.png)
+
+## [STEP 3] Deploy it some place they love America.
 
 **Note: Anytime you make changes to the firmware or the data you can rebuild and upload either without the need to install the other again. They reside in different areas of the flash memory.**
 
