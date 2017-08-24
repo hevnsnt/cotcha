@@ -66,11 +66,13 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 ## OH SHIT I FUCKED IT UP
 This section is for the hackers.  Yep, I fucked mine up a couple times too.  Here is how you fix all the fuck ups. Change to the included ./esptool/ directory.  Don't worry, you can the esptool.py tool to completely erase the ESP8266 and start all over.  The steps would be:
 
-1. `./esptool.py erase_flash`
-*Note: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `sudo ./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)
+1. Connect the D1 Mini to your computer via the Micro-USB port and discover the serial port that is used. [Sparkfun](https://learn.sparkfun.com/tutorials/terminal-basics/connecting-to-your-device) has an excellent write-up on how to do this if you dont know already.
+2. Open your terminal and change to the included ./esptool/ directory and run `./esptool.py erase_flash`
+*Note 1: This assumes you are using OSX or *nix based operating system. If you are running Windows, esptool runs fine but you will need python installed. There are several windows tools available, and a lot of people reference [this page](http://www.pratikpanda.com/completely-format-erase-esp8266-flash-memory/) as a good walk through, but I have not tested it. 
+*Note 1: Depending on your setup, you may have to provide the serial port to esptool.  That would look like: `./esptool.py --port /dev/tty.wchusbserial1420 erase_flash`  (Assuming that /dev/tty.wchusbserial1420 is your serial port.  This will be dependant on your system)
 
-2. Re-Upload the Firmware and SPIFFS content.  
-3. High-five yourself for being awesome. 
+3. Re-Upload the Firmware and SPIFFS content  
+4. High-five yourself for being super awesome 
 
 ## Game Completion:
 If you complete the game, you will get access to the SecKC-ESP8266 Console. ".
