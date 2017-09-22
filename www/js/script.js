@@ -153,11 +153,11 @@ jQuery(document).ready(function($) {
 "[[b;green;]=        SecKC Hacking Terminal            =]\n" +
 "[[b;green;]============================================]\n" +
 "[[b;green;] Greetings -- You have hacked your way into ]\n" +
-"[[b;green;] the #SecKC ESP8266 Terminal. At this point ]\n" +
-"[[b;green;] you have completed the challenge, however  ]\n" +
-"[[b;green;] there are still many 'toys' available via  ]\n" +
-"[[b;green;] the terminal, make sure to say hello if    ]\n" +
-"[[b;green;] someone else connects!                     ]\n" +
+"[[b;green;] the #SecKC ESP8266 Terminal. You are a     ]\n" +
+"[[b;green;] super hacker, but one more challenge       ]\n" +
+"[[b;green;] remains. There are many 'toys' via         ]\n" +
+"[[b;green;] the terminal, can you find them? Please    ]\n" +
+"[[b;green;] say hello if someone else connects!        ]\n" +
 "[[b;green;]============================================]\n" +
 "",
 

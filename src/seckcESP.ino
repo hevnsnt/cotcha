@@ -49,7 +49,7 @@ int setupAP ( int chan_selected );
 //***************************************************************************
 float version               = 1.43;
 const char *appid           = "SecKC-ESP8266";
-char ssid[]                 = "🇺🇲FREE American WiFi";
+char ssid[]                 = "🇺🇸FREE American WiFi";
 int channel                 = 0;
 char username[]             = "admin";
 char password[]             = "password";
