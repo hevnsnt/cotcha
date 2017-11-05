@@ -998,6 +998,10 @@ void loop ( void )
 
     switch ( state )
     {
+        case statemachine::none:
+            asm ("waiti 0\n");
+            break;
+
         case statemachine::beep:
             beep ( state_int );
             break;
