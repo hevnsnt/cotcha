@@ -135,7 +135,7 @@ int chan_selected;
 //***************************************************************************
 
 // WiFi Encryption Types
-String encryptionTypes ( int which )
+static String encryptionTypes ( int which )
 {
     switch ( which )
     {
@@ -168,7 +168,7 @@ String encryptionTypes ( int which )
 //***************************************************************************
 //                            D B G P R I N T                               *
 //***************************************************************************
-void dbg_printf ( const char *format, ... )
+static void dbg_printf ( const char *format, ... )
 {
     static char sbuf[1400];                                                 // For debug lines
     va_list varArgs;                                                        // For variable number of params
@@ -186,7 +186,7 @@ void dbg_printf ( const char *format, ... )
     }
 }
 
-void printfAll ( const char *format, ... )
+static void printfAll ( const char *format, ... )
 {
     if ( ws.count() )
     {
@@ -202,7 +202,7 @@ void printfAll ( const char *format, ... )
 }
 
 /** IP to String? */
-String ipToString ( IPAddress ip )
+static String ipToString ( IPAddress ip )
 {
     String res = "";
 
@@ -218,7 +218,7 @@ String ipToString ( IPAddress ip )
 //***************************************************************************
 //                    F O R M A T  B Y T E S                                *
 //***************************************************************************
-String formatBytes ( size_t bytes )
+static String formatBytes ( size_t bytes )
 {
     if ( bytes < 1024 )
     {
@@ -241,14 +241,14 @@ String formatBytes ( size_t bytes )
 //***************************************************************************
 //                    P I E Z O   B E E P                                   *
 //***************************************************************************
-void beep ( int delayms )
+static void beep ( int delayms )
 {
     digitalWrite ( PIEZO_PIN, HIGH );                                       // Turn PIEZO on
     delay ( delayms );                                                      // wait for a delayms ms
     digitalWrite ( PIEZO_PIN, LOW );                                        // Turn PIEZO off
 }
 
-void beepC ( int delayms )
+static void beepC ( int delayms )
 {
     for ( int c = 0; c < 448; c++ )
     {
@@ -269,7 +269,7 @@ void beepC ( int delayms )
     }
 }
 
-void beep_rr ()
+static void beep_rr ()
 {
     // We'll set up an array with the notes we want to play
     // change these values to make different songs!
@@ -323,7 +323,7 @@ void beep_rr ()
     digitalWrite ( LED_BUILTIN, HIGH );
 }
 
-int frequency ( char note )
+static int frequency ( char note )
 {
     // This function takes a note character (a-g), and returns the
     // corresponding frequency in Hz for the tone() function.
@@ -365,7 +365,7 @@ void setup ( void )
     uint8_t mac[6];
     char mdnsDomain[] = "";
 
-    ets_install_putc1 ( ( void * ) &_u0_putc );
+    ets_install_putc1 ( (void*)_u0_putc );
     system_set_os_print ( 1 );
 //  system_update_cpu_freq ( 160 );                                             // Set CPU to 80/160 MHz
 
@@ -456,7 +456,7 @@ void setup ( void )
     dbg_printf ( "\nReady!\n----------------->>>" );
 }
 
-int setupAP ( int chan_selected )
+static int setupAP ( int chan_selected )
 {
     struct softap_config config;
 
@@ -494,8 +494,7 @@ int setupAP ( int chan_selected )
     return chan_selected;
 }
 
-
-void setupEEPROM()
+static void setupEEPROM()
 {
     dbg_printf ( "EEPROM - Checking" );
     EEPROM.begin ( 512 );
@@ -503,7 +502,7 @@ void setupEEPROM()
     dbg_printf ( "" );
 }
 
-void setupSPIFFS()
+static void setupSPIFFS()
 {
     FSInfo fs_info;                                                         // Info about SPIFFS
     Dir dir;                                                                // Directory struct for SPIFFS
@@ -539,7 +538,7 @@ void setupSPIFFS()
                );
 }
 
-void setupDNSServer()
+static void setupDNSServer()
 {
     // Setup DNS Server
     // if DNS Server is started with "*" for domain name,
@@ -567,7 +566,7 @@ void setupDNSServer()
     dnsd.start ( 53, "*", ip );
 }
 
-void setupHTTPServer()
+static void setupHTTPServer()
 {
     // Web Server Document Setup
     dbg_printf ( "Starting HTTP Captive Portal" );
@@ -654,7 +653,7 @@ void setupHTTPServer()
     httpd.begin();
 }
 
-void setupOTAServer()
+static void setupOTAServer()
 {
     dbg_printf ( "Starting OTA Update Server" );
 
@@ -702,7 +701,7 @@ void setupOTAServer()
     ArduinoOTA.begin();
 }
 
-int scanWiFi ()
+static int scanWiFi ()
 {
     int channels[11];
     std::fill_n ( channels, 11, 0 );
@@ -767,7 +766,7 @@ int scanWiFi ()
     return chan_selected;
 }
 
-void readFile ( String file )
+static void readFile ( String file )
 {
     File f = SPIFFS.open ( file, "r" );
 
@@ -789,7 +788,7 @@ void readFile ( String file )
     }
 }
 
-String getSystemInformation()
+static String getSystemInformation()
 {
     String json;
     StaticJsonBuffer<512> jsonBuffer;
@@ -831,7 +830,7 @@ String getSystemInformation()
     return json;
 }
 
-String getApplicationSettings()
+static String getApplicationSettings()
 {
     String json;
     StaticJsonBuffer<512> jsonBuffer;
@@ -853,14 +852,14 @@ String getApplicationSettings()
     return json;
 }
 
-void onTimer ()
+static void onTimer ()
 {
     dbg_printf ( "Auto WiFi scan initiated!" );
     chan_selected = 0;
     state = statemachine::ap_change;
 }
 
-void eepromLoad()
+static void eepromLoad()
 {
     String json;
     StaticJsonBuffer<512> jsonBuffer;
@@ -914,7 +913,7 @@ void eepromLoad()
     }
 }
 
-void eepromSave()
+static void eepromSave()
 {
     StaticJsonBuffer<512> jsonBuffer;
     JsonObject &root = jsonBuffer.createObject();
@@ -949,7 +948,7 @@ void eepromSave()
     Serial.println();
 }
 
-void eepromInitialize()
+static void eepromInitialize()
 {
     dbg_printf ( "EEPROM - Initializing" );
 
@@ -961,7 +960,7 @@ void eepromInitialize()
     EEPROM.commit();
 }
 
-String getEEPROM()
+static String getEEPROM()
 {
     String json;
 
@@ -976,13 +975,13 @@ String getEEPROM()
     return json;
 }
 
-bool disconnectStationByIP ( IPAddress station_ip )
+static bool disconnectStationByIP ( IPAddress station_ip )
 {
     // Do ARP Query to get MAC address of station_ip
 
 }
 
-bool disconnectStationByMAC ( uint8_t *station_mac )
+static bool disconnectStationByMAC ( uint8_t *station_mac )
 {
 
 }
@@ -1029,7 +1028,7 @@ void loop ( void )
     state_string = "";
 }
 
-void wifi_handle_event_cb ( System_Event_t *evt )
+static void wifi_handle_event_cb ( System_Event_t *evt )
 {
 //    printf ( "event %x\n", evt->event );
 
@@ -1082,7 +1081,7 @@ void wifi_handle_event_cb ( System_Event_t *evt )
 //***************************************************************************
 // HTTPD onRequest                                                          *
 //***************************************************************************
-void onRequest ( AsyncWebServerRequest *request )
+static void onRequest ( AsyncWebServerRequest *request )
 {
     digitalWrite ( LED_BUILTIN, LOW );                                      // Turn the LED on by making the voltage LOW
 
@@ -1150,7 +1149,7 @@ void onRequest ( AsyncWebServerRequest *request )
 //***************************************************************************
 // Manage routing of websocket events                                       *
 //***************************************************************************
-void onEvent ( AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len )
+static void onEvent ( AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len )
 {
     if ( type == WS_EVT_CONNECT )
     {
@@ -1266,7 +1265,7 @@ void onEvent ( AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventTyp
 //***************************************************************************
 // translate and execute command                                            *
 //***************************************************************************
-void execCommand ( AsyncWebSocketClient *client, char *msg )
+static void execCommand ( AsyncWebSocketClient *client, char *msg )
 {
     bool CHANGED = false;
     uint16_t l = strlen ( msg );
@@ -1291,17 +1290,7 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     {
         if ( l > 5 )
         {
-            int v = atoi ( &msg[6] );
-
-            if ( v > 0 )
-            {
-                ADMIN = true;
-            }
-            else
-            {
-                ADMIN = false;
-            }
-
+            ADMIN = atoi ( &msg[6] ) > 0;
             CHANGED = true;
         }
 
@@ -1326,17 +1315,7 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     {
         if ( l > 5 )
         {
-            int v = atoi ( &msg[6] );
-
-            if ( v > 0 )
-            {
-                DEBUG = true;
-            }
-            else
-            {
-                DEBUG = false;
-            }
-
+            DEBUG = atoi ( &msg[6] ) > 0;
             CHANGED = true;
         }
 
@@ -1354,17 +1333,7 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     {
         if ( l > 6 )
         {
-            int v = atoi ( &msg[7] );
-
-            if ( v > 0 )
-            {
-                SILENT = true;
-            }
-            else
-            {
-                SILENT = false;
-            }
-
+            SILENT = atoi ( &msg[7] ) > 0;
             CHANGED = true;
         }
 
@@ -1800,7 +1769,7 @@ void execCommand ( AsyncWebSocketClient *client, char *msg )
     dbg_printf ( "WS[%d]: %s", client->id(), msg );
 }
 
-void client_status ( AsyncWebSocketClient *client )
+static void client_status ( AsyncWebSocketClient *client )
 {
     struct station_info *station = wifi_softap_get_station_info();
     uint8_t client_count = wifi_softap_get_station_num();
