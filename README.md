@@ -69,7 +69,7 @@ You can add/edit the files in the "www" folder to your liking. (Files in the "ww
 #### [STEP 3] Deploy it a place where people love America.
 
 ## OH SHIT I FUCKED IT UP
-This section is for the hackers.  Yep, I fucked mine up a couple times too.  Here is how you fix all the fuck ups. Change to the included ./esptool/ directory.  Don't worry, you can the esptool.py tool to completely erase the ESP8266 and start all over.  The steps would be:
+This section is for the hackers.  Yep, I fucked mine up a couple times too.  Here is how you fix all the fuck ups. Change to the included ./esptool/ directory.  Don't worry, you can use the esptool.py tool to completely erase the ESP8266 and start all over.  The steps would be:
 
 1. Connect the D1 Mini to your computer via the Micro-USB port and discover the serial port that is used. [Sparkfun](https://learn.sparkfun.com/tutorials/terminal-basics/connecting-to-your-device) has an excellent write-up on how to do this if you dont know already.
 2. Open your terminal and change to the included ./esptool/ directory and run: 
