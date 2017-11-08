@@ -25,7 +25,7 @@
 *  3.7V 500mAh 503035 Lithium Polymer LiPo Rechargeable Battery $2 [[Link]](https://www.aliexpress.com/item/Wholesale-100-pcs-3-7V-500mAh-503035-Lithium-Polymer-LiPo-Rechargeable-Battery-For-Mp3-Mp4-PAD/32734113304.html?spm=a2g0s.9042311.0.0.3Ae9zT)
 * Piezo buzzer $1 [[Link]](https://www.aliexpress.com/item/Black-Plastic-14-x-7mm-2-Pins-Passive-Piezo-Buzzer-AC1-3V-Piezo-Transducer-with-Flying/32723376720.html?ws_ab_test=searchweb0_0,searchweb201602_3_10152_10065_10151_10068_10130_5430020_10307_10137_10060_10155_10154_5370011_10056_10055_10054_10059_100031_10099_5400020_5410011_10103_10102_10052_10053_10142_10107_10050_10051_5380020_10084_10083_10080_10082_10081_10178_10110_10111_10112_5390011_10113_10114_10312_10313_10314_10315_10316_10078_10079_10073_5420011,searchweb201603_16,ppcSwitch_4&btsid=21893a7d-1b2f-4904-a0fc-4871ead676b0&algo_expid=310ddc03-9d74-4cf2-8e97-9e677fbd6706-1&algo_pvid=310ddc03-9d74-4cf2-8e97-9e677fbd6706) -- This is not needed, but makes the beeps fun.
 
-Total Cost: About $6.  That is 0.6% the cost of one iphone. 
+Total Cost: About $5, because you don't need the speaker. But even if you do add one, it is STILL less than 0.6% of the cost of one iphone. 
 
 
 ## Hardware Construction
