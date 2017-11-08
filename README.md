@@ -92,7 +92,8 @@ $ ./esptool.py erase_flash
 4. High-five yourself for being super awesome 
 
 ## Game Completion:
-If you complete the game, you will get access to the SecKC-ESP8266 Console. ".
+If you complete the game, you will get administrative access to the SecKC-ESP8266 Console. It is at least one step further than you think. If I was really good at making games, this would be more clear, but I am not, so there you go.
+
 From here you can monitor all connections and see when someone connects to the device.
 The console also allows you to enter commands to get more info about the status of the device, and various other 'things'.
 
