@@ -31,8 +31,8 @@ Total Cost: About $5, because you don't need the speaker. But even if you do add
 ## Hardware Construction
 I will be updating this section soon.  Basically the instructions are "build it".  
 
-* Battery leads go to 3V3 (3.3v) and GND. 
-* Lipo Charger is connected to VIN and GND of battery. 
+* Connect Lipo Battery to Lipo Charger
+* Connect Battery Out on LipoCharger to 3V3 (3.3v) and GND on D1 Mini
 
 If you want sound:
 Connect the '+' lead of the piezo to GPIO 4 (D2 on WeMos D1 Mini) and '-' lead to Ground.
