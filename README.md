@@ -31,6 +31,9 @@ Total Cost: About $6.  That is 0.6% the cost of one iphone.
 ## Hardware Construction
 I will be updating this section soon.  Basically the instructions are "build it".  
 
+* Battery leads go to 3V3 (3.3v) and GND. 
+* Lipo Charger is connected to VIN and GND of battery. 
+
 If you want sound:
 Connect the '+' lead of the piezo to GPIO 4 (D2 on WeMos D1 Mini) and '-' lead to Ground.
 I chose GPIO 4 because I installed the long leads with the headers on the WeMos D1 Mini. The spacing from ground was perfect to just plug the buzzer in direct between G & D2.
